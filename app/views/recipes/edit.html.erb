@@ -1,0 +1,19 @@
+<h1>Edit Recipe</h1>
+<%= form_for @recipe do |f| %>
+   <%= f.label :name %>
+   <%= f.text_field :name %>
+
+   <%= f.label :time %>
+   <%= f.text_field :time %>
+
+   <%= f.label :category %>
+   <%= f.text_field :category %>
+
+   <%= f.label :serving_size %>
+   <%= f.text_field :serving_size %>
+
+   <%= f.label :instruction %>
+   <%= f.text_area :instruction %>
+
+   <%= f.submit "Save", class: 'btn btn-success'%>
+ <% end %>
