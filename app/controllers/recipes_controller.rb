@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.all.with_attached_images
   end
 
   def show
@@ -13,6 +13,7 @@ class RecipesController < ApplicationController
 
   def create
     @recipe = Recipe.new(recipe_params)
+    @recipe.images.attach(params[:message][:images])
 
     if @recipe.save
       flash[:notice] = "Recipe was saved."
