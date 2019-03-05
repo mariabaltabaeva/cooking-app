@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>CookingApp</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Recipes</title>
+  <%= csrf_meta_tags %>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Our recipes website</h1>
+    </header>
+    <main class="content">
+      <nav>
+        <%= link_to "Home", welcome_index_path %>
+        <%= link_to "About", welcome_about_path %>
+      </nav>
+      <%= yield %>
+    </main>
 
-  <body>
-    <ul>
-      <li><%= link_to "Home", welcome_index_path %></li>
-       <li><%= link_to "About", welcome_about_path %></li>
-     </ul>
-
-    <%= yield %>
+    <footer>
+      <h4>Copyright <%Date.today.year %> OurRecipesWebsite</h4>
+    </div>
   </body>
-</html>
+  </html>
