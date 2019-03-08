@@ -9,11 +9,13 @@ class RecipesController < ApplicationController
 
   def new
     @recipe = Recipe.new
+    @ingredients = Ingredient.all
   end
 
   def create
     @recipe = Recipe.new(recipe_params)
-    @recipe.images.attach(params[:message][:images])
+    @recipe.images.attach(params[:images])
+    @recipe.ingredients = Ingredient.where()
 
     if @recipe.save
       flash[:notice] = "Recipe was saved."

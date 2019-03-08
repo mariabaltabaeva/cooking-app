@@ -16,7 +16,9 @@
    <%= f.label :instruction %>
    <%= f.text_area :instruction %>
 
-   <%= form.file_field :images, multiple: true %>
+   <%= f.file_field :images, multiple: true %>
+
+   <%= @ingredients %>
 
    <%= f.submit "Save", class: 'btn btn-success'%>
  <% end %>
