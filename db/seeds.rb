@@ -8,3 +8,10 @@
 25.times do
   Ingredient.create!(name: Faker::Food.ingredient)
 end
+
+Category.create name:'Main Dishes'
+Category.create name:'Appetizers'
+Category.create name:'Salads'
+Category.create name:'Desserts'
+
+puts 'Created categories.'

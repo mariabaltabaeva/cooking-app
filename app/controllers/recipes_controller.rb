@@ -10,6 +10,7 @@ class RecipesController < ApplicationController
   def new
     @recipe = Recipe.new
     @ingredients = Ingredient.all
+    @categories = Category.all.collect{|c| [c.name, c.id] }
   end
 
   def create
@@ -28,6 +29,7 @@ class RecipesController < ApplicationController
 
   def edit
     @recipe = Recipe.find(params[:id])
+    @categories = Category.all.collect{|c| [c.name, c.id] }
   end
 
   def update
@@ -57,6 +59,6 @@ end
 
   private
    def recipe_params
-     params.require(:recipe).permit(:name, :time, :categoty, :instruction, :serving_size)
+     params.require(:recipe).permit(:name, :time, :instruction, :serving_size)
    end
 end

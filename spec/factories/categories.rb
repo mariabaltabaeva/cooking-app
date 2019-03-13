@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :ingredient do
+  factory :category do
     name "MyString"
   end
 end

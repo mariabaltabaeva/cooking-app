@@ -1,7 +1,6 @@
 <%= @recipe.name %>
 <%= @recipe.time %>
-<%= @recipe.category %>
 <%= @recipe.serving_size %>
 <%= @recipe.instruction %>
 <%= link_to "Edit", edit_recipe_path(@recipe), class: 'btn btn-success' %>
-<%= link_to "Delete", @recipe, method: :delete,class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this recipe?'} %> 
+<%= link_to "Delete", @recipe, method: :delete,class: 'btn btn-danger', data: {confirm: 'Are you sure you want to delete this recipe?'} %>

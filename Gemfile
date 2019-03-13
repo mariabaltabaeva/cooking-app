@@ -61,7 +61,7 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'shoulda'
   gem 'faker'
-  gem 'factory_girl_rails'
+  gem 'factory_bot_rails', '~> 4.8.2'
   gem 'pry-rails'
 end
 
